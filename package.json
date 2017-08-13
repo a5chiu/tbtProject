@@ -1,0 +1,20 @@
+{
+  "name": "tbt",
+  "version": "1.0.0",
+  "description": "web project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Chiu",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "path": "^0.12.7",
+    "reload": "^2.2.1"
+  },
+  "devDependencies": {}
+}

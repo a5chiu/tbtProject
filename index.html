@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>TBT AutoCare</title>
+    <link rel="stylesheet" type="text/css" href="/public/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:700" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="x.currentSlide(0)">
+    <div class="wrap">
+        <div class="base">
+            <div id="banner">
+                <h1>BANNER</h1>
+            </div>
+
+            <div class="NavBar">
+                <ul>
+                    <li><a class="active" href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+
+            <div class="Slideshow">
+
+                <div class="mySlides fade">
+                    <div class="numText"> 1 / 2</div>
+                    <img src="/public/Images/Trump_2016.png" style="width:100%">
+                    <div class="text">Caption Text </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numText"> 2 / 2 </div>
+                    <img src="/public/Images/TrumpBanner.jpg" style="width:100%">
+                    <div class="text">Caption Two </div>
+                </div>
+
+                <a class="cursor" onclick="x.plusSlides(-1)">&#10094;</a>
+                <a class="cursor" id="next"> &#10095;</a>
+
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="x.currentSlide(0)"></span>
+                <span class="dot" onclick="x.currentSlide(1)"></span>
+            </div>
+
+
+            <div class="Pair">
+                <div class="About">
+                    <h1>About</h1>
+                </div>
+                <div class="schedule">
+                    <h1>Schedule</h1>
+                    <form action="/" method="post">
+                        <input type="text" placeholder="Name">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Triple">
+                <div class="Location">
+                    <h1>Location</h1>
+                </div>
+
+                <div class="Contact">
+                    <h1>Contact</h1>
+                </div>
+
+                <div class="Service">
+                    <h1>Service</h1>
+                </div>
+            </div>
+
+            <div class="BottomPicture">
+                <h1>Picture</h1>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/public/client.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+<footer>
+    <h1>Posted By Alex Chiu</h1>
+</footer>
+
+</html>
