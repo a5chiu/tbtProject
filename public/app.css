@@ -1,59 +1,97 @@
+html {
+    background: url(/public/Images/testBackground.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .base {
     height: 100%;
-    width: 80%;
-    margin: 0 10% 0 10%;
-    border-width: 15px;
+    width: 85%;
+    margin: 0 7.5% 0 7.5%;
+    border-width: 5%;
     border-style: solid;
-    border-color: red;
+    border-color: black;
+    border-radius: 1%;
+    background: rgba(169, 169, 169, .65);
+    font-family: 'Merriweather', serif;
+    opacity: 50%;
 }
 
 #banner {
     text-align: center;
     background-color: rgb(25, 25, 25);
-    padding: 50px 0 50px 0;
     margin: 0;
+    height: 20%;
+    border-radius: 1%;
+}
+
+#banner img {
+    width: 99.5%;
+    border-radius: 1%;
 }
 
 .NavBar {
+    font-family: 'Ubuntu', arial;
     text-align: center;
     text-decoration: none;
     overflow: hidden;
     background-color: rgb(33, 33, 33);
-    padding: 0;
+    background-color: whitesmoke;
+    height: 3%;
 }
 
 .NavBar a {
     text-decoration: none;
-    font-size: 100 px;
+    font-size: 110%;
 }
 
 .NavBar li {
     display: inline-block;
-    margin: 0%;
-    border-color: white;
-    padding: 0 5% 0 5%;
+    margin: 0% .5%;
+    background-color: #122d65;
+    color: white;
+    border-radius: 10px;
+    padding: .3% 3.5% .3% 3.5%;
     text-align: center;
-    font-family: 'Droid Serif', serif;
 }
 
-.NavBar a:hover {
-    background-color: green;
+li a {
+    color: white;
+}
+
+.NavBar li:hover {
+    background-color: rgba(206, 0, 0, .9);
 }
 
 .Slideshow {
-    max-width: 1000px;
+    height: 50%;
+    width: 70%;
     position: relative;
     margin: auto;
     padding: 2% 0 0 0;
 }
 
+img {
+    border-style: solid;
+    border-width: 2%;
+    border-color: black;
+    border-radius: 7px;
+}
+
 .mySlides {
+    max-width: 100%;
     display: none;
 }
 
 #next {
     right: 0;
-    border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#prev {
+    margin-left: .8%;
 }
 
 .cursor {
@@ -76,7 +114,7 @@
 
 .text {
     color: #f2f2f2;
-    font-size: 15px;
+    font-size: 100%;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
@@ -84,19 +122,11 @@
     text-align: center;
 }
 
-.numText {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .dot {
     cursor: pointer;
     height: 13px;
     width: 13px;
-    margin: 0 2px;
+    margin: 0 1px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -139,57 +169,356 @@
     }
 }
 
-.Pair {
-    width: 100%;
-    padding: 2% 0 0 0;
+#Pair {
+    padding: 2% 5% 3% 5%;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    color: white;
+    font-size: 100%;
 }
 
-.About {
-    text-align: center;
-    float: left;
-    width: 50%;
-    padding: 10% 0;
+input[type=text],
+input[type=email] {
+    padding: .5%;
+    padding-left: 25px;
+    font-size: 1vw;
+    font-style: italic;
 }
 
-.schedule {
-    text-align: center;
-    background-color: purple;
-    width: 50%;
+#Pair #Service {
+    height: 100%;
     float: left;
-    padding: 10% 0;
+    width: 47%;
+    border-color: black;
+    border-width: 1%;
+    border-style: solid;
+    border-radius: 7px;
+    background: rgba(1, 51, 132, .90);
+}
+
+#serviceHead {
+    background-color: rgba(206, 0, 0, .8);
+    font-family: 'Roboto Condensed', serif;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1%;
+    border-color: black;
+    font-weight: bold;
+    font-size: 2vw;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 2% 5%;
+    width: 70%;
+    margin: 3% 10%;
+    font-size: 1.9vw;
+}
+
+#pairLine {
+    width: 80%;
+}
+
+#serviceStart {
+    font-family: "Georgia";
+    font-size: 1.2vw;
+    text-align: justify;
+    width: 70%;
+    padding: 0 0 0 15%;
+    line-height: 170%;
+}
+
+#Service ul {
+    background-color: rgba(1, 41, 106, .7);
+    border-style: solid;
+    border-color: yellow;
+    border-width: 2%;
+    border-radius: 25px;
+    padding: 2% 0 2% 10%;
+    font-size: .9vw;
+    margin: 0 10%;
+}
+
+#Service li {
+    font-family: "Verdana";
+    padding: 1% 0;
+}
+
+#serviceEnd {
+    font-family: "Georgia";
+    font-size: 1.2vw;
+    text-align: justify;
+    width: 70%;
+    padding: 0 0 3% 15%;
+    line-height: 170%;
+}
+
+.shadowRight {
+    box-shadow: 10px 10px 5px #282c33;
+}
+
+.shadowLeft {
+    box-shadow: -10px 10px 5px #282c33;
+}
+
+#Pair #contact {
+    font-family: 'Roboto Condensed', sans-serif;
+    border-width: 1%;
+    border-style: solid;
+    border-color: black;
+    width: 47%;
+    float: right;
+    text-align: center;
+    border-radius: 7px;
+    background: rgba(1, 51, 132, .90);
+    height: 100%;
+}
+
+#contactHead {
+    background-color: rgba(206, 0, 0, .8);
+    font-family: 'Roboto Condensed', serif;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1%;
+    border-color: black;
+    font-weight: bold;
+    font-size: 1.9vw;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 70%;
+    margin: 3% 10%;
+    padding: 2% 5%;
+}
+
+.contactInfo {
+    font-size: 2.2vw;
+    margin-bottom: 0%;
+}
+
+#scheduleInfo {
+    display: block;
+}
+
+.custName {
+    background: url(/public/Images/nameIcon.ico) no-repeat center left;
+    background-color: white;
+    padding-top: 20px;
+    width: 35%;
+}
+
+#emptySpace1 {
+    padding: 2%;
+}
+
+#phoneNumber {
+    background: url(/public/Images/phoneIcon.ico) no-repeat center left;
+    background-color: white;
+    padding-top: 5px;
+    width: 35%;
+}
+
+#email {
+    background: url(/public/Images/emailIcon.ico) no-repeat center left;
+    background-color: white;
+    padding-top: 5px;
+    width: 35%;
+}
+
+#subject {
+    background: url(/public/Images/subjectIcon.ico) no-repeat center left;
+    background-color: white;
+    padding-top: 5px;
+    width: 77%;
+}
+
+#description {
+    display: table-cell;
+    resize: vertical;
+    overflow: auto;
+    width: 82%;
+    height: 40%;
+    font-size: 1vw;
+    font-style: italic;
+    padding: .5%;
+}
+
+#sideSpace {
+    display: inline-block;
+}
+
+#submitButton {
+    display: inline-block;
+    margin: 0 0 5% 0;
 }
 
 .Triple {
+    clear: both;
     width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: white;
+}
+
+.tripleLine {
+    width: 80%;
+}
+
+.box {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    background: rgba(25, 60, 130, .90);
+    border-radius: 7px;
+    border-width: 1%;
+    border-style: solid;
+    border-color: black;
+    position: inherit;
+}
+
+.tripleButton {
+    -moz-box-shadow: inset 0px -2px 0px 0px #0b1708;
+    -webkit-box-shadow: inset 0px -2px 0px 0px #0b1708;
+    box-shadow: inset 0px -2px 0px 0px #0b1708;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #420000), color-stop(1, #d67171));
+    background: -moz-linear-gradient(top, #420000 5%, #d67171 100%);
+    background: -webkit-linear-gradient(top, #420000 5%, #d67171 100%);
+    background: -o-linear-gradient(top, #420000 5%, #d67171 100%);
+    background: -ms-linear-gradient(top, #420000 5%, #d67171 100%);
+    background: linear-gradient(to bottom, #420000 5%, #d67171 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#420000', endColorstr='#d67171', GradientType=0);
+    background-color: #420000;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #000000;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Ubuntu', arial;
+    font-size: .9vw;
+    font-weight: bold;
+    padding: 3% 12%;
+    text-decoration: none;
+    text-shadow: 0px 3px 0px #010301;
+}
+
+#address {
+    font-size: 1.4vw;
+    font-family: Ubuntu;
+    text-decoration: none;
+    color: white;
+}
+
+#lastPicture {
+    vertical-align: top;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1%;
+    border-color: black;
+    width: 35%;
+    height: 28vw;
+    position: inherit;
+    padding-left: 3%;
+    margin-left: 5%;
+}
+
+.About {
+    background: rgba(1, 51, 132, .90);
+    width: 43%;
+    vertical-align: top;
+    display: inline-block;
+    border-width: 2%;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 5px 10px 5px #282c33;
+    text-align: center;
+    margin: 0 5% 0 5%;
+    padding-top: 1%;
+    border-radius: 7px;
+}
+
+#aboutHead {
+    padding: 1% 0;
+    font-size: 2vw;
+    margin: 0 10%;
+    background-color: rgba(206, 0, 0, .8);
+    font-family: 'Roboto Condensed', serif;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1%;
+    border-color: black;
+}
+
+#aboutParagraph {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.1vw;
+    text-align: justify;
+    width: 70%;
+    padding: 0 0 4% 15%;
+    margin: 0;
+    line-height: 170%;
+}
+
+.secondSection {
+    height: 40%;
+    background-color: rgba(32, 32, 32, .8);
+    overflow: hidden;
+    text-align: center;
+    clear: both;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    padding: 2%;
+}
+
+#secondPicture {
+    height: 28vw;
+    width: 48%;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+    border-width: 2%;
+    border-style: solid;
+    border-color: black;
+    font-size: 1vw;
 }
 
 .Location {
-    text-align: center;
-    background-color: orange;
     float: left;
-    width: 23.33333333%;
-    margin: 0 5% 0 5%;
+    text-align: center;
+    width: 30%;
+    margin: 2% 5% 2% 5%;
+    padding-top: 1%;
+    box-shadow: 0 10px 5px #282c33;
+    vertical-align: top;
+    text-align: center;
+    background: rgba(0, 38, 119, .9);
+    border-radius: 7px;
+    border-width: 1%;
+    border-style: solid;
+    border-color: black;
+    font-family: 'Merriweather', serif;
+    color: white;
 }
 
-.Contact {
-    text-align: center;
-    background-color: red;
-    float: left;
-    width: 23.33333333%;
-    margin: 0 5% 0 5%;
+#locationHead {
+    font-size: 1.9vw;
+    padding: 2% 5%;
+    margin: 0 10%;
+    background-color: rgba(206, 0, 0, .8);
+    font-family: 'Roboto Condensed', serif;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1%;
+    border-color: black;
 }
 
-.Service {
-    text-align: center;
-    background-color: yellow;
-    float: left;
-    width: 23.33333333%;
-    margin: 0 5% 0 5%;
-}
-
-.BottomPicture {
-    text-align: center;
-    padding: 10%;
+#map {
+    margin-left: 10%;
+    width: 80%;
+    height: 13vw;
+    background-color: grey;
 }
 
 footer {

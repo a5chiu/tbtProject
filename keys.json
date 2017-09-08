@@ -1,0 +1,7 @@
+{
+   "mongoHost": "ds143030.mlab.com",
+   "mongoPort": "43030",
+   "mongoDatabase": "mLab",
+   "mongoUser": "tbtowner",
+   "mongoPass": "Cinnamon1521724"
+}

@@ -2,86 +2,195 @@
 <html>
 
 <head>
-    <title>TBT AutoCare</title>
+    <title>TBT Car Care</title>
     <link rel="stylesheet" type="text/css" href="/public/app.css" />
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Roboto+Condensed|Ubuntu|Merriweather|Vollkorn" rel="stylesheet">
+    <script src="app.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPmkOhlAG1XVV-08RshjAkuWhC_DklrSQ&callback=x.initMap"></script>
+
 </head>
 
-<body onload="x.currentSlide(0)">
+<body>
     <div class="wrap">
         <div class="base">
             <div id="banner">
-                <h1>BANNER</h1>
+                <img src="/public/Images/banner.png">
             </div>
 
             <div class="NavBar">
                 <ul>
-                    <li><a class="active" href="#">Contact</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="#">Location</a></li>
-                    <li><a href="#">About</a></li>
+                    <li id="contactNav"><a href="#">CONTACT</a></li>
+                    <li id="serviceNav"><a href="#">SERVICES</a></li>
+                    <li id="aboutNav"><a href="#">ABOUT</a></li>
+                    <li id="locationNav"><a href="#">LOCATION</a></li>
                 </ul>
             </div>
 
             <div class="Slideshow">
 
                 <div class="mySlides fade">
-                    <div class="numText"> 1 / 2</div>
-                    <img src="/public/Images/Trump_2016.png" style="width:100%">
-                    <div class="text">Caption Text </div>
+                    <img src="/public/Images/location.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numText"> 2 / 2 </div>
-                    <img src="/public/Images/TrumpBanner.jpg" style="width:100%">
-                    <div class="text">Caption Two </div>
+                    <img src="/public/Images/engine.jpg" style="width:100%">
                 </div>
 
-                <a class="cursor" onclick="x.plusSlides(-1)">&#10094;</a>
+                <div class="mySlides fade">
+                    <img src="/public/Images/oilChange.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/public/Images/mechanic.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/public/Images/breaks.jpg" style="width:100%">
+                </div>
+
+                <a class="cursor" id="prev">&#10094;</a>
                 <a class="cursor" id="next"> &#10095;</a>
 
             </div>
 
             <div style="text-align:center">
-                <span class="dot" onclick="x.currentSlide(0)"></span>
-                <span class="dot" onclick="x.currentSlide(1)"></span>
+                <span class="dot" id="dot1"></span>
+                <span class="dot" id="dot2"></span>
+                <span class="dot" id="dot3"></span>
+                <span class="dot" id="dot4"></span>
+                <span class="dot" id="dot5"></span>
             </div>
 
 
-            <div class="Pair">
-                <div class="About">
-                    <h1>About</h1>
+            <div id="Pair">
+                <div class="outerYellow">
+                    <div id="Service" class="shadowLeft">
+                        <h1 id="serviceHead">OUR SERVICES</h1>
+                        <hr id="pairLine">
+                        <p id="serviceStart"> Our professional staff ensures that customer satisfaction is guaranteed for every visit. We offer a wide variety of general car care services including
+                        </p>
+
+                        <ul>
+                            <li> All types of fluid changes</li>
+                            <li> Brakes, Suspension, and Steering</li>
+                            <li> Full Tune Ups</li>
+                            <li> A/C Service</li>
+                            <li> Tire Changes</li>
+                            <li> Engine and Transmission Replacement and repairs</li>
+                            <li> Diagnostics or Trouble Shooting</li>
+                            <li> Electrical diagnostics</li>
+                            <li> Emission diagnostics</li>
+                        </ul>
+                        <p id="serviceEnd">
+                            <b>* We DO NOT do collision work*</b>
+                            <br>In regards to any repairs not listed above, please feel free to contact us for any questions. Almost anything on your car can be fixed!
+                        </p>
+                    </div>
                 </div>
-                <div class="schedule">
-                    <h1>Schedule</h1>
-                    <form action="/" method="post">
-                        <input type="text" placeholder="Name">
-                        <button type="submit">Submit</button>
-                    </form>
+
+
+                <div id="contact" class="shadowRight">
+                    <h1 id="contactHead">CONTACT US</h1>
+                    <hr id="pairLine">
+
+                    <h2 style="margin-top: 1%">Call at <b class="contactInfo">(626) 444-8277</b> <br>Email at <br><b class="contactInfo">tbt.khangpham@gmail.com</b></h2>
+
+                    <hr id="pairLine">
+
+                    <p>OR</p>
+
+                    <hr id="pairLine">
+
+                    <h2 style="font-size:1.2vw">Submit a ticket and one of our trusted representatives <br>will get back to you as soon as possible</h2>
+                    <div id="innerForm">
+
+
+                        <form action="/Submitted" method="post" id="scheduleInfo" onsubmit="return x.validateForm()">
+                            <span>
+                        <input type="text" id="firstName" name = "firstName" class="custName" placeholder="First Name *" required/>
+                        <input type="text" id="lastName" name = "lastName" class="custName" placeholder="Last Name *" required/>
+                        </span>
+
+                            <div id="emptySpace1"></div>
+
+                            <span>
+                        <input type="text" placeholder="XXX-XXX-XXXX *" id="phoneNumber" name="phoneNumber" required/>
+                        <input type="email" placeholder="Email *" id="email" name = "email" required/>
+                        </span>
+
+                            <div id="emptySpace1"></div>
+
+                            <input type="text" placeholder="Subject *" id="subject" name="subject">
+
+                            <div id="emptySpace1"></div>
+
+                            <textarea placeholder="Description" id="description" rows="5" name="description"></textarea>
+
+                            <div id="emptySpace1"></div>
+                            <div id="sideSpace"></div>
+                            <button type="submit" id="submitButton">Submit</button>
+
+                        </form>
+
+
+                    </div>
                 </div>
+
             </div>
+
+            <div class="secondSection">
+                <div class="Location box shadowLeft">
+                    <h1 id="locationHead">LOCATION</h1>
+
+                    <hr class="tripleLine">
+
+
+                    <div id="map" align="center"></div>
+
+                    <hr class="tripleLine">
+
+                    <a id="address" target="_blank" href="https://www.google.com/maps/place/T.+B.+T.+Hiep+Thanh+Car+Care/@34.0810138,-118.0614174,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2da7b7b9b224f:0xcf26d70efb9b076d!8m2!3d34.0810094!4d-118.0592287">9640 Valley Blvd, Rosemead, CA 91770</a>
+
+
+
+                    <hr class="tripleLine">
+
+
+                    <p style="font-size: 1vw; margin-bottom: 3%">Come visit us at our local shop nearby</p>
+                </div>
+
+
+                <img src="/public/Images/front.JPG" id="secondPicture"></img>
+            </div>
+
 
             <div class="Triple">
-                <div class="Location">
-                    <h1>Location</h1>
+
+                <div id="lastPicture">
+                    <h1>COMING SOON</h1>
                 </div>
 
-                <div class="Contact">
-                    <h1>Contact</h1>
-                </div>
+                <div class="About">
+                    <h1 id="aboutHead">ABOUT THE SHOP</h1>
 
-                <div class="Service">
-                    <h1>Service</h1>
-                </div>
-            </div>
 
-            <div class="BottomPicture">
-                <h1>Picture</h1>
+                    <hr class="tripleLine">
+                    <h2 style="font-size:1.5vw">Learn More About Our Business</h2>
+                    <hr class="tripleLine">
+
+                    <p id="aboutParagraph">Our family operated independent shop has been around for over 16 years serving the city of Rosemead. We welcome with open arms, anyone who wants their vehicle to be repaired, 7 days a week. Our waiting room lounge is equipped with
+                        cable television and free wifi. Customer satisfaction is our number one priority. </p>
+                </div>
             </div>
 
 
         </div>
+
+
+    </div>
+
+
+    </div>
 
     </div>
 
@@ -89,7 +198,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/public/client.js" type="text/javascript"></script>
-    <script src="app.js" type="text/javascript"></script>
 </body>
 
 <footer>

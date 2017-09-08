@@ -4,7 +4,9 @@
   "description": "web project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "deploy": "gcloud app deploy --project tbtserver-176721"
   },
   "author": "Alex Chiu",
   "license": "ISC",
@@ -13,8 +15,18 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "mongodb": "^2.2.31",
+    "nodemailer": "^4.0.1",
+    "passport": "^0.4.0",
     "path": "^0.12.7",
     "reload": "^2.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a5chiu/tbtProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a5chiu/tbtProject/issues"
+  },
+  "homepage": "https://github.com/a5chiu/tbtProject#readme"
 }
